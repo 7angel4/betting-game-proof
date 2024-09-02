@@ -1,0 +1,104 @@
+\ Model _copy
+\ LP format - for model browsing. Use MPS format to capture full model detail.
+Minimize
+ 
+Subject To
+ R3: 2 x - z + 300 single_ind >= 1
+ R7: 3 x - z + 300 single_ind >= 1
+ R22: 6 x - z + 300 single_ind >= 1
+ R60: 4 x - y + 300 single_ind >= 1
+ R64: 2 x - y - 300 single_ind <= -1
+ R73: - x - y + z - 300 single_ind <= -1
+ R100: 2 x + y - z + 300 single_ind >= 1
+ R102: - x - y + z - 300 single_ind <= -1
+ R104: 3 x + y - z + 300 single_ind >= 1
+ R106: - 3 y + z - 300 single_ind <= -1
+ R108: x + 3 y - z + 300 single_ind >= 1
+ R110: x + y - z - 300 single_ind <= -1
+ R113: main_ind - component_ind[0] - component_ind[1] >= -1
+ R115: x + 3 y - 3 z + 300 component_ind[0] >= 1
+ R117: x + y - z - 300 component_ind[1] <= -1
+ R119: x - 3 y + z + 300 single_ind >= 1
+ R1092: 3 y - z + 300 single_ind <= 300
+ R1098: x + y - z + 300 single_ind <= 300
+ R1100: 7 y - z + 300 single_ind <= 300
+ R1104: - x + 3 y - z + 300 single_ind <= 300
+ R1106: x + 3 y - z + 300 single_ind <= 300
+ R1108: main_ind - component_ind[0] <= 0
+ R1109: main_ind - component_ind[1] <= 0
+ R1111: - x + 3 y - z + 300 component_ind[0] <= 300
+ R1113: 3 y - z - 300 component_ind[1] >= -299
+ R1124: main_ind - component_ind[0] <= 0
+ R1127: - 2 x + 2 y - z + 300 component_ind[0] <= 300
+ R1131: - 2 x + y + 300 single_ind <= 300
+ R1142: - 3 x + y - 300 single_ind >= -299
+ R1153: - 3 x + y + z + 300 single_ind <= 300
+ R1157: main_ind - component_ind[0] <= 0
+ R1160: x + 2 y - z + 300 component_ind[0] <= 300
+ R1167: main_ind - component_ind[1] <= 0
+ R1171: - 2 x + y - 300 component_ind[1] >= -299
+ R1176: main_ind - component_ind[1] <= 0
+ R1180: - 3 x + z - 300 component_ind[1] >= -299
+ R1182: 3 x + y - z + 300 single_ind <= 300
+ R1187: main_ind - component_ind[1] <= 0
+ R1191: x + y - z - 300 component_ind[1] >= -299
+ R1193: - 3 x + y + z + 300 single_ind <= 300
+ R1195: main_ind - component_ind[0] <= 0
+ R1198: 2 x + y - 2 z + 300 component_ind[0] <= 300
+ R2019: 7 x + y - 7 z + 300 component_ind[0] >= 1
+ non_pos_f: 0.0277777777777778 single_ind + 0.0277777777777778 single_ind
+   + 0.0277777777777778 single_ind + 0.0277777777777778 single_ind
+   + 0.0277777777777778 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 main_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 main_ind
+   + 0.00462962962962963 main_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 main_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 main_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 main_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 main_ind
+   + 0.00462962962962963 main_ind + 0.00462962962962963 main_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 single_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 main_ind
+   + 0.00462962962962963 single_ind + 0.00462962962962963 main_ind
+   - 0.0277777777777778 single_ind - 0.0277777777777778 single_ind
+   - 0.0277777777777778 single_ind - 0.0277777777777778 single_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 main_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 main_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 main_ind - 0.00462962962962963 single_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 main_ind
+   - 0.00462962962962963 single_ind - 0.00462962962962963 main_ind
+   <= -0.1166666666666667
+ V1: x - y <= -1
+Bounds
+ x free
+ y free
+ z >= 3
+Binaries
+ single_ind single_ind single_ind single_ind single_ind single_ind main_ind
+ single_ind single_ind main_ind main_ind single_ind single_ind main_ind
+ single_ind single_ind main_ind single_ind single_ind single_ind main_ind
+ single_ind single_ind main_ind main_ind main_ind single_ind single_ind
+ single_ind single_ind single_ind single_ind single_ind main_ind
+ component_ind[0] component_ind[1] single_ind main_ind single_ind
+ single_ind single_ind single_ind single_ind single_ind single_ind
+ single_ind main_ind component_ind[0] component_ind[1] main_ind single_ind
+ main_ind component_ind[0] single_ind single_ind main_ind single_ind
+ main_ind single_ind single_ind single_ind main_ind component_ind[0]
+ single_ind main_ind component_ind[1] single_ind main_ind component_ind[1]
+ single_ind single_ind main_ind component_ind[1] single_ind main_ind
+ component_ind[0] component_ind[0]
+Generals
+ x y z
+End
