@@ -18,6 +18,7 @@ Given initial stacks $(x,y,z)$, where $0<x<y<z$, define:
 - similarly, $h_n(y,x,z)$ = Pr(Player 2 is eliminated in exactly $n$ rounds), etc.
 - $f_n(x,y,z) = \sum_{j=1}^n{h_j(x,y,z)} - \sum_{j=1}^n{h_j(y,x,z)}$
 - $\alpha_n$ = threshold of interest for $f_n$ (see paper for more details).
+- $V = \{(x,y,z):0 < x < y < z\}$
 
 ## Repository structure
 <pre>
@@ -40,6 +41,12 @@ Given initial stacks $(x,y,z)$, where $0<x<y<z$, define:
 |   |-- [similar to xy/]
 </pre>
 
+There are two versions studied:
+1. `xy`: studies $f(x,y,z)$.
+2. `yz`: studies $f(y,z,x)$.
+
+To switch version, simply go to `constants.ipynb`, and change `VERSION` to `Version.XY` or `Version.YZ`.
+
 The directory `xy` contains data associated with $f(x,y,z)$.
 
 The directory `yz` contains data associated with $f(y,z,x)$.
@@ -49,6 +56,10 @@ Key modules:
 - `mip`: Building MIP models to lower bound $f_n$ and $h_n$.
 - `plot`: Plot coordinates (x,y,z) for which $f_n(x,y,z) > \alpha_n$ (for the $yz$ version, $f_n(y,z,x) > \alpha_n$).
 
-See the `constants` module for what the output files represent.
+Key data files (e.g.):
+- `xy/h_n(x,y,z)`: Cache for constants and indicator constraints in $h_n(x,y,z)$, in CSV format. Each line contains ($n$, constant, indicator constraints).
+- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $f_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $f_n(x,y,z)$, $z$).\
+Data for the plots below.
+- `xy/f_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $f_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $f_n(x,y,z)$ values.
 
 
