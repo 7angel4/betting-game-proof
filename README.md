@@ -16,7 +16,7 @@ Given initial stacks $(x,y,z)$, where $0<x<y<z$, define:
 - $f(x,y,z)$ = Pr(Player 1 is the loser), given initial stacks
 - $h_n(x,y,z)$ = Pr(Player 1 is eliminated in exactly $n$ rounds)
 - similarly, $h_n(y,x,z)$ = Pr(Player 2 is eliminated in exactly $n$ rounds), etc.
-- $\Delta_n(\cdot) = \sum_{j=1}^n{h_j(pos\-state})} - \sum_{j=1}^n{h_j(neg\-state)}$
+- $\Delta_n(\cdot) = \sum_{j=1}^n{h_j(pos\-state)} - \sum_{j=1}^n{h_j(neg\-state)}$
 - $\alpha_n$ = threshold of interest for $\Delta_n$ (see paper for more details).
 - $V = \{(x,y,z):0 < x < y < z\}$
 
@@ -57,12 +57,12 @@ And so on.
 ### Key modules:
 - `gen_h`: Logic for generating expressions for $h_n(x,y,z)$.
 - `mip`: Building MIP models to lower bound $\Delta_n$ and $h_n(pos\-state) - h_n(neg\-state)$.
-- `plot`: Plot coordinates (x,y,z) for which $f_n(x,y,z) > \alpha_n$ (for the $yz$ version, $f_n(y,z,x) > \alpha_n$).
+- `plot`: Plot coordinates (x,y,z) for which $\Delta_n(x,y,z) > \alpha_n$ (for the $yz$ version, $\Delta_n(y,z,x) > \alpha_n$).
 
 ### Key data files (e.g.):
 - `xy/h_n(x,y,z)`: Cache for constants and indicator constraints in $h_n(x,y,z)$, in CSV format. Each line contains ($n$, constant, indicator constraints).
-- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $f_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $f_n(x,y,z)$, $z$).\
+- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $f_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $\Delta_n(x,y,z)$, $z$).\
 Data for the plots below.
-- `xy/f_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $f_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $f_n(x,y,z)$ values.
+- `xy/\Delta_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $\Delta_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $\Delta_n(x,y,z)$ values.
 
 
