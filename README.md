@@ -57,6 +57,7 @@ The directory `yz` contains data associated with $f(y,z,x)$.\\
 And so on.
 
 ### Key modules:
+- `constants`: Version of states being studied, and definition of invariants used across all modules.
 - `gen_h`: Logic for generating expressions for $h_n(x,y,z)$.
 - `mip`: Building MIP models to lower bound $\Delta_n$ and $h_n(posState) - h_n(negState)$.
 - `plot`: Plot coordinates (x,y,z) for which $\Delta_n(x,y,z) > \alpha_n$ (for the $yz$ version, $\Delta_n(y,z,x) > \alpha_n$).
