@@ -16,7 +16,7 @@ Given initial stacks $(x,y,z)$, where $0<x<y<z$, define:
 - $f(x,y,z)$ = Pr(Player 1 is the loser), given initial stacks
 - $h_n(x,y,z)$ = Pr(Player 1 is eliminated in exactly $n$ rounds)
 - similarly, $h_n(y,x,z)$ = Pr(Player 2 is eliminated in exactly $n$ rounds), etc.
-- $\Delta_n(\cdot) = \sum_{j=1}^n{h_j(pos\-state)} - \sum_{j=1}^n{h_j(neg\-state)}$
+- $\Delta_n(\cdot) = \sum_{j=1}^n{h_j(posState)} - \sum_{j=1}^n{h_j(negState)}$
 - $\alpha_n$ = threshold of interest for $\Delta_n$ (see paper for more details).
 - $V = \{(x,y,z):0 < x < y < z\}$
 
@@ -56,7 +56,7 @@ And so on.
 
 ### Key modules:
 - `gen_h`: Logic for generating expressions for $h_n(x,y,z)$.
-- `mip`: Building MIP models to lower bound $\Delta_n$ and $h_n(pos\-state) - h_n(neg\-state)$.
+- `mip`: Building MIP models to lower bound $\Delta_n$ and $h_n(posState) - h_n(negState)$.
 - `plot`: Plot coordinates (x,y,z) for which $\Delta_n(x,y,z) > \alpha_n$ (for the $yz$ version, $\Delta_n(y,z,x) > \alpha_n$).
 
 ### Key data files (e.g.):
