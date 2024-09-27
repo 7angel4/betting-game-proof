@@ -3,7 +3,7 @@
 
 Computer-assisted proof for two theorems in the 3-player getting game.
 
-See **README.pdf** for more detailed explanation of the modules, and how to run them for the proof of the relevant theorems.
+<mark>See **README.pdf** for more detailed explanation of the modules, and how to run them for the proof of the relevant theorems.</mark>
  
 ## Betting game model
  
