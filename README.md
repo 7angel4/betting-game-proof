@@ -61,7 +61,7 @@ And so on.
 
 ### Key data files (e.g.):
 - `xy/h_n(x,y,z)`: Cache for constants and indicator constraints in $h_n(x,y,z)$, in CSV format. Each line contains ($n$, constant, indicator constraints).
-- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $f_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $\Delta_n(x,y,z)$, $z$).\
+- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $\Delta_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $\Delta_n(x,y,z)$, $z$).\
 Data for the plots below.
 - `xy/\Delta_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $\Delta_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $\Delta_n(x,y,z)$ values.
 
