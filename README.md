@@ -45,27 +45,27 @@ Given initial stacks $(x,y,z)$, where $0<x<y<z$, define:
 </pre>
 
 There are two versions studied:
-1. `xy`: studies $f(x,y,z) - f(y,x,z)$.
-2. `yz`: studies $f(y,z,x) - f(z,y,x)$.
+1. `xyz`: studies $f(x,y,z) - f(y,x,z)$.
+2. `yzx`: studies $f(y,z,x) - f(z,y,x)$.
 3. `yyz`: studies $f(x,y,z) - f(y,y,z)$.
 4. `uuz`: studies $f(x,y,z) - f(\frac{x+y}{2}, \frac{x+y}{2}, z)$
 
 To switch version, simply go to `constants.ipynb`, and change `VERSION` to `Version.XY` or `Version.YZ`.
 
-The directory `xy` contains data associated with $f(x,y,z)$.\\
-The directory `yz` contains data associated with $f(y,z,x)$.\\
+The directory `xyz` contains data associated with $f(x,y,z)$.\\
+The directory `yzx` contains data associated with $f(y,z,x)$.\\
 And so on.
 
 ### Key modules:
 - `constants`: Version of states being studied, and definition of invariants used across all modules.
 - `gen_h`: Logic for generating expressions for $h_n(x,y,z)$.
 - `mip`: Building MIP models to lower bound $\Delta_n$ and $h_n(posState) - h_n(negState)$.
-- `plot`: Plot coordinates (x,y,z) for which $\Delta_n(x,y,z) > \alpha_n$ (for the $yz$ version, $\Delta_n(y,z,x) > \alpha_n$).
+- `plot`: Plot coordinates (x,y,z) for which $\Delta_n(x,y,z) > \alpha_n$ (for the $yzx$ version, $\Delta_n(y,z,x) > \alpha_n$).
 
 ### Key data files (e.g.):
-- `xy/h_n(x,y,z)`: Cache for constants and indicator constraints in $h_n(x,y,z)$, in CSV format. Each line contains ($n$, constant, indicator constraints).
-- `xy/n=2_coords_f`: $(x,y,z)$ coordinates for which $\Delta_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $\Delta_n(x,y,z)$, $z$).\
+- `xyz/h_n(x,y,z)`: Cache for constants and indicator constraints in $h_n(x,y,z)$, in CSV format. Each line contains ($n$, constant, indicator constraints).
+- `xyz/n=2_coords_f`: $(x,y,z)$ coordinates for which $\Delta_2(x,y,z) > \alpha_2$, for a fixed sum $x+y+z=2000$, in CSV format. Each line contains ($x$, $y$, $\Delta_n(x,y,z)$, $z$).\
 Data for the plots below.
-- `xy/\Delta_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $\Delta_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $\Delta_n(x,y,z)$ values.
+- `xyz/\Delta_n(x,y,z)-alpha_n.png`: A series of scatter plots of $x$ vs. $y$, for different $n$ values from $n=2$ to the first $n$ for which $\Delta_n(x,y,z) > \alpha_n$ for all regions in $V$. The colors are based on the $\Delta_n(x,y,z)$ values.
 
 
