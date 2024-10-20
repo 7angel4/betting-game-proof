@@ -1,6 +1,6 @@
 .DS_Store
 .ipynb_checkpoints/
 thm6.ipynb
-paper-materials/plots.docx
 *.drawio
 *.zip
+/paper-materials
